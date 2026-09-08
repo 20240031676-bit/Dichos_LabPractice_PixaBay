@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixabay Challenge Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <section class="viewer">
+            <header class="hero">
+                <h1>Pixabay Challenge Viewer</h1>
+                <p>Search Pixabay or choose a challenge to view media.</p>
+            </header>
+
+            <form id="searchForm" class="search-row">
+                <label class="sr-only" for="searchInput">Search term</label>
+                <input
+                    id="searchInput"
+                    type="search"
+                    placeholder="Search term input"
+                    autocomplete="off"
+                    required
+                >
+
+                <label class="sr-only" for="mediaType">Media type</label>
+                <select id="mediaType">
+                    <option value="photos">Photos</option>
+                    <option value="videos">Videos</option>
+                </select>
+
+                <button type="submit" class="primary-btn">Search</button>
+            </form>
+
+            <div class="challenge-row" aria-label="Pixabay challenges">
+                <button type="button" class="challenge-btn" data-challenge="rocketLaunch">
+                    Rocket Launch
+                </button>
+                <button type="button" class="challenge-btn" data-challenge="basketball">
+                    Basketball
+                </button>
+                <button type="button" class="challenge-btn" data-challenge="forest">
+                    Forest
+                </button>
+                <button type="button" class="challenge-btn" data-challenge="roadForest">
+                    Road Forest
+                </button>
+            </div>
+
+            <div id="status" class="status" role="status" aria-live="polite"></div>
+
+            <section>
+                <h2 class="results-title">Results</h2>
+                <div id="results" class="results"></div>
+            </section>
+        </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Never commit the local API key.
+config.js
+
+# Common local/development files
+node_modules/
+.DS_Store
+Thumbs.db
+.vscode/
