@@ -176,30 +176,6 @@ function displayResults(data, type) {
     }
 
     setStatus(`${data.hits.length} result(s) displayed.`, "success");
-}function displayVideos(hits) {
-  results.innerHTML = "";
-  hits.forEach(video => {
-    const card = document.createElement("article");
-    card.className = "card";
-
-    const player = document.createElement("video");
-    player.controls = true;
-    player.preload = "metadata";
-
-    const source = document.createElement("source");
-    source.src = video.videos.medium?.url || video.videos.small?.url || video.videos.tiny?.url;
-    source.type = "video/mp4";
-
-    const info = document.createElement("div");
-    info.className = "card-info";
-    const text = document.createElement("p");
-    text.textContent = video.tags || "Pixabay video";
-
-    player.appendChild(source);
-    info.appendChild(text);
-    card.append(player, info);
-    results.appendChild(card);
-  });
 }
 
 function buildUrl(type, query) {
