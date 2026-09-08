@@ -32,7 +32,7 @@ const CHALLENGES = {
 
     basketball: {
         label: "Basketball",
-        endpoint: "photos",
+        endpoint: "videos",
         params: {
             q: "basketball",
             image_type: "photo",
@@ -44,7 +44,7 @@ const CHALLENGES = {
 
     forest: {
         label: "Forest",
-        endpoint: "photos",
+        endpoint: "videos",
         params: {
             q: "forest",
             image_type: "photo",
@@ -56,7 +56,7 @@ const CHALLENGES = {
 
     roadForest: {
         label: "Road Forest",
-        endpoint: "photos",
+        endpoint: "videos",
         params: {
             q: "road forest",
             image_type: "photo",
